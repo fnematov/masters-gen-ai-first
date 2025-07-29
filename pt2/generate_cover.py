@@ -15,6 +15,11 @@ def generate_vinyl_cover():
 
     original_img = Image.open(original_cover_path)
     original_img.save("output/original_cover.jpg")
+    width, height = original_img.size
+
+    if width % 8 != 0 or height % 8 != 0:
+        width = (width // 8) * 8
+        height = (height // 8) * 8
 
     # Set device (MPS for Mac, fallback to CPU)
     device = torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
@@ -41,7 +46,7 @@ def generate_vinyl_cover():
         "mysterious and hopeful atmosphere, fireflies, misty background, "
         "cinematic lighting, highly detailed, storybook art style"
     )
-    image = pipe(prompt, num_inference_steps=30, guidance_scale=7.5).images[0]
+    image = pipe(prompt, num_inference_steps=30, guidance_scale=7.5, height=height, width=width).images[0]
     image.save("output/generated_album_cover.jpg")
 
     # Screenshot of pipeline config
