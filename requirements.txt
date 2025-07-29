@@ -3,6 +3,6 @@ langchain
 openai
 faiss-cpu
 sentence-transformers
-PyPDF2
+pypdf
 tiktoken
 langchain_community
