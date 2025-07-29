@@ -1,3 +1,20 @@
+---
+title: GenAI SaaS Bot
+emoji: 🤖
+colorFrom: indigo
+colorTo: pink
+sdk: streamlit
+sdk_version: "1.35.0"
+app_file: app.py
+pinned: false
+---
+
+# SaaS Product Documentation Support Bot 🤖
+
+A Streamlit-based chatbot that uses LangChain and OpenAI to answer questions about your SaaS product documentation.
+...
+
+
 # SaaS Product Documentation Support Bot 🤖
 
 A Streamlit-based chatbot that uses LangChain and OpenAI to answer questions about your SaaS product documentation.
