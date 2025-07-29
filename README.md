@@ -1,10 +1,10 @@
 ---
 title: GenAI SaaS Bot
-emoji: 🤖
+emoji: 🚀
 colorFrom: indigo
 colorTo: pink
 sdk: streamlit
-sdk_version: "1.35.0"
+sdk_version: 1.47.1
 app_file: app.py
 pinned: false
 ---
